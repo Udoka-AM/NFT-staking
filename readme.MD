@@ -560,7 +560,6 @@ impl<'info> Claim<'info> {
 
         let seeds = &[
             b"config".as_ref(),
-            self.collection_mint.to_account_info().key.as_ref(),
             &[self.config.bump]
         ];     
         let signer_seeds = &[&seeds[..]];
